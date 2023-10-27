@@ -14,7 +14,7 @@ if (!all(pkgs_bioc_load)) BiocManager::install(pkgs_bioc[pkgs_bioc_load])
 seqlevels(BSgenome.Dmelanogaster.UCSC.dm6) <- sub("chr", "",
                                                   seqlevels(BSgenome.Dmelanogaster.UCSC.dm6))
 # Disable scientific notation for numbers
-options(scipen=9999999999999999)
+options(scipen=999)
 # Read the table with all the probes generated in PaintSHOP 
 probes_all <- read_table("data/PaintSHOP-full-probe-file.txt",
                          col_names = T)
